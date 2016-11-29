@@ -1,0 +1,24 @@
+{
+  "name": "continuous",
+  "version": "0.0.0",
+  "description": "Continuous integration and delivery experiments",
+  "main": "source/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node source/main",
+    "postversion": "gp && gp --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonkuhrt/continuous.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonkuhrt/continuous/issues"
+  },
+  "homepage": "https://github.com/jasonkuhrt/continuous#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
