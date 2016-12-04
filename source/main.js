@@ -1,5 +1,12 @@
 import Server from './Server'
 
-Server.create({
+
+
+const server = Server.create({
   port: 7070
 })
+
+
+export default {
+  server,
+}
