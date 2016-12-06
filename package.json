@@ -4,11 +4,11 @@
   "description": "Continuous integration and delivery experiments",
   "main": "build/main.js",
   "scripts": {
-    "start": "nodemon source/main.js --exec babel-node",
+    "dev": "nodemon source/main.js --exec babel-node",
     "test": "jest",
     "build": "babel source -d build",
     "postversion": "git push && git push --tags",
-    "serve": "npm run build && node build/main.js"
+    "start": "npm run build && node build/main.js"
   },
   "repository": {
     "type": "git",

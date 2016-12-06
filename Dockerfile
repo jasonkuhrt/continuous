@@ -24,4 +24,4 @@ run npm run build
 label name=continuous
 
 entrypoint ["dumb-init", "--"]
-cmd ["npm", "run", "serve"]
+cmd ["npm", "run", "start"]
