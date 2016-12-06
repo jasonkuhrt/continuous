@@ -22,7 +22,8 @@
   "homepage": "https://github.com/jasonkuhrt/continuous#readme",
   "dependencies": {
     "bluebird": "^3.4.6",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "ioredis": "^2.4.2"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

@@ -1,0 +1,13 @@
+version: '2'
+services:
+  app:
+    build: .
+    command: npm run dev
+    ports:
+      - 7070:7070
+    volumes:
+      - .:/source
+    links:
+      - redis
+  redis:
+    image: redis

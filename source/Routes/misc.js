@@ -10,6 +10,4 @@ routes.get("/ping", (req, res) => {
 
 
 
-export default {
-  all: routes,
-}
+export default routes
