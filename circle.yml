@@ -4,7 +4,6 @@ machine:
 dependencies:
   cache_directories:
     - "~/docker"
-
   override:
     - docker --version
     # Cache builds manually https://circleci.com/docs/docker/#caching-docker-layers

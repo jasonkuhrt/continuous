@@ -8,5 +8,6 @@ script:
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS;
   - docker push jasonkuhrt/continuous:from-travis-$COMMIT_HASH
-  # - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-  # - docker push jasonkuhrt/continuous:$CIRCLE_SHA1
+env:
+  global:
+    - COMMIT_HASH=${TRAVIS_COMMIT::8}
