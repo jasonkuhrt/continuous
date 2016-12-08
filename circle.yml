@@ -2,12 +2,10 @@ machine:
   services:
     - docker
 dependencies:
-  cache_directories:
-    - "~/docker"
   override:
     - docker --version
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-    - docker pull jasonkuhrt/continuous:latest || echo "No latest tag, probably because this is the first image build ever."
+    - docker pull jasonkuhrt/continuous:latest || echo "No latest tag, probably because this is the first image build."
     - docker build --rm=false --tag jasonkuhrt/continuous:from-circle-$CIRCLE_SHA1 .
     - docker tag jasonkuhrt/continuous:from-circle-$CIRCLE_SHA1 jasonkuhrt/continuous:latest
 test:
