@@ -3,6 +3,7 @@ machine:
     - docker
 dependencies:
   override:
+    - docker --version
     - docker build --rm=false --tag jasonkuhrt/continuous:$CIRCLE_SHA1 .
 test:
   override:
