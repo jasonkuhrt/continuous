@@ -6,10 +6,11 @@
   "scripts": {
     "commitmsg": "validate-commit-msg",
     "dev": "nodemon source/main.js --exec babel-node",
-    "test": "jest",
+    "test": "jest --forceExit",
     "build": "babel source -d build",
     "postversion": "git push && git push --tags",
-    "start": "npm run build && node build/main.js"
+    "start": "npm run build && node build/main.js",
+    "clean": "rm -rf build"
   },
   "repository": {
     "type": "git",
