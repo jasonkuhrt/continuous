@@ -13,6 +13,8 @@ run apk add --no-cache --virtual .bootstrap-deps wget ca-certificates \
     && chmod +x /usr/local/bin/dumb-init \
     && apk del .bootstrap-deps
 
+# Hack to try and make circleci work
+run mkdir -p /source
 workdir /source
 
 copy package.json .
