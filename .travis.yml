@@ -4,7 +4,7 @@ services:
 install:
   - docker build -t jasonkuhrt/continuous:from-travis-$COMMIT_HASH .
 script:
-  - docker run jasonkuhrt/continuous:from-travis-$COMMIT_HASH /bin/sh -c "/code/scripts/ci-test"
+  - docker run jasonkuhrt/continuous:from-travis-$COMMIT_HASH npm run test
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS;
   - docker push jasonkuhrt/continuous:from-travis-$COMMIT_HASH
