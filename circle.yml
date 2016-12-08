@@ -2,9 +2,15 @@ machine:
   services:
     - docker
 dependencies:
+  cache_directories:
+    - "~/docker"
+
   override:
     - docker --version
+    # Cache builds manually https://circleci.com/docs/docker/#caching-docker-layers
+    - if [[ -e ~/docker/image.tar ]]; then docker load -i ~/docker/image.tar; fi
     - docker build --rm=false --tag jasonkuhrt/continuous:from-circle-$CIRCLE_SHA1 .
+    - mkdir -p ~/docker; docker save circleci/continuous:from-circle-$CIRCLE_SHA1 > ~/docker/image.tar
 test:
   override:
     - docker run jasonkuhrt/continuous:from-circle-$CIRCLE_SHA1 npm run test
