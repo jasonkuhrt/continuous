@@ -1,6 +1,6 @@
 {
   "name": "continuous",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Continuous integration and delivery experiments",
   "main": "build/main.js",
   "scripts": {
