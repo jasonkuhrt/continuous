@@ -1,4 +1,4 @@
-# continuous  
+# continuous
 
 image:https://travis-ci.org/jasonkuhrt/continuous.svg?branch=master["Build Status", link="https://travis-ci.org/jasonkuhrt/continuous"] image:https://circleci.com/gh/jasonkuhrt/continuous.svg?style=svg["CircleCI", link="https://circleci.com/gh/jasonkuhrt/continuous"]
 
